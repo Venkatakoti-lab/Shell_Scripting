@@ -1,0 +1,1 @@
+echo "testing the script without shebang"
