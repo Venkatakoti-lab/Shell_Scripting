@@ -49,9 +49,16 @@ echo "Today's date is $DATE"
 ```
 
 - We can accept values to the variables using command line `bash 01-vars.sh Ram Raheem` and fetch them using `$1....$9`
-- To get all the variables, we can use: `$@`
-- To get the count of no: of variables passed: `$#`
-- To get the name of the script: `$0`
+  
+**- Special Variables in Shell-Script:**
+
+- To get all the variables, we can use: **$@**
+- To get the count of no: of variables passed: **$#**
+- To get the name of the script: **$0**
+- Current Working Directory: **$pwd**
+- Hostname: **$HOSTNAME**
+- P.ID of current shell script: **$$**
+- Process ID of last background Command: **$!**
 - For e.g. Perform addition of 2 numbers that are provided at run-time
 
 `01-vars.sh`
