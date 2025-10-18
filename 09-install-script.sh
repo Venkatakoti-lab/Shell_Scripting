@@ -7,4 +7,4 @@ then
      exit 1 #other than 0 we can give any number
 fi
 dnf install mysqll -y
-dnf install maven -y
+dnf install docker -y
