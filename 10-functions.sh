@@ -10,7 +10,7 @@ VALIDATE (){
         echo "$2: SUCCESS"
     fi
 }
-if [ USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo "ERROR:: please run this script as root user"
     exit 1
