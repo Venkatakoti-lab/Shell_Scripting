@@ -7,10 +7,10 @@ N="\e[0m"
 VALIDATE (){
     if [ $1 -ne 0 ]
     then
-        echo "$2: $R FAILED $N "
+        echo -e "$2: $R FAILED $N "
         exit 1
     else 
-        echo "$2: $G SUCCESS $N "
+        echo -e "$2: $G SUCCESS $N "
     fi 
 }
 if [ $USERID -ne 0 ]
@@ -26,7 +26,7 @@ then
     VALIDATE $? "MYSQL installation"
     
 else
-    echo "Mysql installed: $Y ALREADY $N "
+    echo -e "Mysql installed: $Y ALREADY $N "
 fi
 
 dnf list installed git
@@ -35,5 +35,5 @@ then
     dnf install git -y
     VALIDATE $? "GIT Installation"
 else
-    echo "GIT installed: $Y ALREADY $N "
+    echo -e "GIT installed: $Y ALREADY $N "
 fi
