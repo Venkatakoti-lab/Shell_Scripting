@@ -13,11 +13,18 @@ VALIDATE (){
         echo -e "$2: $G SUCCESS $N "
     fi 
 }
-if [ $USERID -ne 0 ]
-then 
-    echo "ERROR:PLEASE RUN THIS SCRIPT AS ROOT USER"
-    exit 1 
-fi
+
+CHECK_ROOT (){
+    if [ $USERID -ne 0 ]
+    then 
+        echo "ERROR:PLEASE RUN THIS SCRIPT AS ROOT USER"
+        exit 1
+    else
+        echo "YOU ARE IN SUPER_USER"
+    fi
+}
+
+CHECK_ROOT
 
 dnf list installed mysql
 if [ $? -ne 0 ]
