@@ -28,7 +28,7 @@ echo "This script is executed at: $TIMESTAMP"
 CHECK_ROOT
 for package in $@
 do
-  dnf list available $package &>>$LOG_FILENAME
+  dnf list installed $package &>>$LOG_FILENAME
   if [ $? -ne 0 ]
   then 
         dnf install $package -y &>>$LOG_FILENAME
