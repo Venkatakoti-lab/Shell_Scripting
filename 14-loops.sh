@@ -32,7 +32,7 @@ do
   if [ $? -ne 0 ]
   then 
         dnf install $package -y &>>$LOG_FILENAME
-        VALIDATE $? "$package install"
+        VALIDATE $? "$package"
   else 
       echo -e "$package installed: Already"
   fi 
